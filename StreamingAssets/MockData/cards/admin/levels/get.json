@@ -1,0 +1,20 @@
+[
+    {
+        "id": "c534424b-02fb-45a8-8a19-60d9196b481a",
+        "level": "Level 1",
+        "lang_iso": "EN",
+        "project_id": "20fe1fcd-5a90-499f-bcdc-b57e56fbdf39"
+    },
+    {
+        "id": "c534424b-02fb-45a8-8a19-60d9196b481a",
+        "level": "Level 2",
+        "lang_iso": "EN",
+        "project_id": "20fe1fcd-5a90-499f-bcdc-b57e56fbdf32"
+    },
+    {
+        "id": "c534424b-02fb-45a8-8a19-60d9196b481a",
+        "level": "Level 3",
+        "lang_iso": "EN",
+        "project_id": "20fe1fcd-5a90-499f-bcdc-b57e56fbdf30"
+    }
+]

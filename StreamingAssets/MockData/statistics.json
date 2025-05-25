@@ -1,0 +1,14 @@
+[
+    {
+        "id": "2b1f73ac-9654-47cb-811a-7b903f758bf4",
+        "user_id": 23,
+        "level_id": "c534424b-02fb-45a8-8a19-60d9196b481a",
+        "correct_answers": 2,
+        "incorrect_answers": 4,
+        "correct_answers_in_row": 8,
+        "stars": 2,
+        "earned_money": 35,
+        "time_completed": 0
+        
+    }
+]
