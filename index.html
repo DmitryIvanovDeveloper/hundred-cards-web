@@ -153,8 +153,8 @@
 
 				if (guest) {
 						setTimeout(() => {
+						unityInstance.SendMessage("Authentication", "EnableLogin");
 						unityInstance.SendMessage("Login", "AutoLogin", email ??' ewkoles@mail.ru', password ?? 'Gamepass_01');
-						console.log("Sent ProjectId to Unity:", projectId);
 					}, 1000);
 				}
 
