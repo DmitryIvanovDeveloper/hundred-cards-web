@@ -122,16 +122,40 @@
 					return urlParams.get("project_id") || "";
 				};
 
+				const getEmailFromUrl = () => {
+					const urlParams = new URLSearchParams(window.location.search);
+					return urlParams.get("email") || null;
+				};
+
+				const getPasswordFromUrl = () => {
+					const urlParams = new URLSearchParams(window.location.search);
+					return urlParams.get("password") || null;
+				};
+
+				const getIsGuestFromUrl = () => {
+					const urlParams = new URLSearchParams(window.location.search);
+					return urlParams.get("guest") || null;
+				};
+
 				const projectId = getProjectIdFromUrl();
+				const email = getProjectIdFromUrl();
+				const password = getProjectIdFromUrl();
+				const guest = getIsGuestFromUrl();
 
 				if (projectId) {
-					// ✅ Отправляем ProjectId в Unity
 					setTimeout(() => {
 						unityInstance.SendMessage("Registrartion", "SetProjectId", projectId);
 						console.log("Sent ProjectId to Unity:", projectId);
 					}, 1000);
 				} else {
 					console.warn("No projectId found in URL query.");
+				}
+
+				if (guest) {
+						setTimeout(() => {
+						unityInstance.SendMessage("Login", "AutoLogin", email ??' ewkoles@mail.ru', password ?? 'Gamepass_01');
+						console.log("Sent ProjectId to Unity:", projectId);
+					}, 1000);
 				}
 
 			}).catch((message) => {
