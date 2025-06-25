@@ -153,14 +153,8 @@
 
 				if (guest) {
 						setTimeout(() => {
-						unityInstance.SendMessage("Authentication", "EnableLogin");
+						unityInstance.SendMessage("Authentication", "AutoLogin", email ??' ewkoles@mail.ru', password ?? 'Gamepass_01');
 					}, 1000);
-				}
-				
-				if (guest) {
-						setTimeout(() => {
-						unityInstance.SendMessage("Login", "AutoLogin", email ??' ewkoles@mail.ru', password ?? 'Gamepass_01');
-					}, 2000);
 				}
 
 			}).catch((message) => {
