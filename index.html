@@ -152,9 +152,13 @@
 				}
 
 				if (guest) {
-						setTimeout(() => {
-						unityInstance.SendMessage("Login", "AutoLogin", email ??' ewkoles@mail.ru', password ?? 'Gamepass_01');
-						console.log("Sent ProjectId to Unity:", projectId);
+					setTimeout(() => {
+						const payload = JSON.stringify({
+						email:   'ewkoles@mail.ru',
+						password:'Gamepass_01'
+					});
+						unityInstance.SendMessage("Authentication", "EnableLogin");
+						unityInstance.SendMessage("Login", "AutoLogin", payload);
 					}, 1000);
 				}
 
