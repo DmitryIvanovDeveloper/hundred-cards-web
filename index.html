@@ -152,7 +152,6 @@
 				}
 
 				if (guest) {
-<<<<<<< HEAD
 					setTimeout(() => {
 						const payload = JSON.stringify({
 						email:   'ewkoles@mail.ru',
@@ -160,10 +159,6 @@
 					});
 						unityInstance.SendMessage("Authentication", "EnableLogin");
 						unityInstance.SendMessage("Login", "AutoLogin", payload);
-=======
-						setTimeout(() => {
-						unityInstance.SendMessage("Authentication", "AutoLogin", 'ewkoles@mail.ru', 'Gamepass_01');
->>>>>>> 36ee4fdaeff1c14dc99c27462ba0cc672e909dde
 					}, 1000);
 				}
 
