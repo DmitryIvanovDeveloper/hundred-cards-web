@@ -152,8 +152,12 @@
 				}
 
 				if (guest) {
-						setTimeout(() => {
-						unityInstance.SendMessage("Authentication", "AutoLogin", 'ewkoles@mail.ru', 'Gamepass_01');
+					setTimeout(() => {
+						const payload = JSON.stringify({
+						email:   'ewkoles@mail.ru',
+						password:'Gamepass_01'
+					});
+						unityInstance.SendMessage("Authentication", "AutoLogin", payload);
 					}, 1000);
 				}
 
